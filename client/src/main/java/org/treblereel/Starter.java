@@ -5,12 +5,14 @@ import elemental2.dom.Event;
 import elemental2.dom.XMLHttpRequest;
 import jsinterop.annotations.JsMethod;
 import org.gwtproject.core.client.ScriptInjector;
+import org.treblereel.gwt.three4g.THREE;
 import org.treblereel.gwt.xr.api.Context;
 import org.treblereel.gwt.xr.api.Loadable;
 
 public class Starter {
 
     public void onModuleLoad() {
+        DomGlobal.console.log(THREE.RGB_ETC1_Format);
 
         XMLHttpRequest req = new XMLHttpRequest();
         req.onreadystatechange = new XMLHttpRequest.OnreadystatechangeFn() {

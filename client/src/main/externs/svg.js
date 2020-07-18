@@ -163,6 +163,7 @@ SVGElementInstance.prototype.firstChild;
 SVGElementInstance.prototype.lastChild;
 
 
+
 /**
  * @type {!SVGElementInstance}
  */
