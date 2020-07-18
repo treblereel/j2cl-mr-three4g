@@ -163,7 +163,7 @@
         <configuration>
           <externs>
             <extern>src/main/externs/externs.js</extern>
-            <extern>src/main/externs/three.js</extern>
+           <extern>src/main/externs/three.js</extern>
           </externs>
           <defaultWebappDirectory>${project.build.directory}/gwt/launcherDir</defaultWebappDirectory>
           <compilationLevel>ADVANCED</compilationLevel>

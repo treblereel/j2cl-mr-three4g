@@ -12,10 +12,24 @@ var THREE = {};
  */
 THREE.AudioLoader
 
+
 /**
  * @constructor
+ * @extends {THREE.EventDispatcher}
  */
-THREE.EventDispatcher = function() {};
+THREE.BufferGeometry = function() {};
+
+/**
+ * @constructor
+ * @extends {THREE.BufferGeometry}
+ * @param {number=} width
+ * @param {number=} height
+ * @param {number=} depth
+ * @param {number=} widthSegments
+ * @param {number=} heightSegments
+ * @param {number=} depthSegments
+ */
+THREE.BoxBufferGeometry = function(width, height, depth, widthSegments, heightSegments, depthSegments) {};
 
 /**
  * @constructor
@@ -24,6 +38,17 @@ THREE.EventDispatcher = function() {};
  * @param {boolean=} normalized
  */
 THREE.BufferAttribute = function(array, itemSize, normalized) {};
+
+/**
+ * @constructor
+ * @extends {THREE.Object3D}
+ */
+THREE.Camera = function() {};
+
+/**
+ * @constructor
+ */
+THREE.EventDispatcher = function() {};
 
 /**
  * @constructor
@@ -42,6 +67,13 @@ THREE.Float32BufferAttribute = function(array, itemSize, normalized) {};
  * @param {boolean=} normalized
  */
 THREE.Float64BufferAttribute = function(array, itemSize, normalized) {};
+
+/**
+ * @constructor
+ * @extends {THREE.EventDispatcher}
+ */
+THREE.Geometry = function() {};
+
 
 /**
  * @constructor
@@ -93,9 +125,40 @@ THREE.Material = function(parameters) {};
 
 /**
  * @constructor
+ * @extends {THREE.Object3D}
+ * @param {THREE.Geometry|THREE.BufferGeometry=} geometry
+ * @param {THREE.Material=} material //TODO
+ */
+THREE.Mesh = function(geometry, material) {};
+
+/**
+ * @constructor
+ * @extends {THREE.Material}
+ * @param {Object=} parameters
+ */
+THREE.MeshBasicMaterial = function(parameters) {};
+
+/**
+ * @constructor
  * @extends {THREE.EventDispatcher}
  */
 THREE.Object3D = function() {};
+
+/**
+ * @constructor
+ * @extends {THREE.Camera}
+ * @param {number=} fov
+ * @param {number=} aspect
+ * @param {number=} near
+ * @param {number=} far
+ */
+THREE.PerspectiveCamera = function(fov, aspect, near, far) {};
+
+/**
+ * @constructor
+ * @extends {THREE.Object3D}
+ */
+THREE.Scene = function() {};
 
 /**
  * @constructor
@@ -220,3 +283,27 @@ THREE.Vector4 = function(x, y, z, w) {};
  * @param {number=} anisotropy
  */
 THREE.VideoTexture = function(video, mapping, wrapS, wrapT, magFilter, minFilter, format, type, anisotropy) {};
+
+/**
+ * @constructor
+ * @param {!Object=} params
+ */
+THREE.WebGLRenderer = function(params) {};
+
+/**
+ * @type {HTMLElement}
+ */
+THREE.WebGLRenderer.domElement
+
+/**
+ * @param {THREE.Scene} scene
+ * @param {THREE.Camera} camera
+ */
+THREE.WebGLRenderer.render = function(scene, camera) {};
+
+/**
+ * @param {number} width
+ * @param {number} height
+ * @param {boolean=} updateStyle
+ */
+THREE.WebGLRenderer.setSize = function(width, height, updateStyle) {};
